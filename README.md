@@ -2,6 +2,13 @@
 
 A clean, modern Markdown reader and editor for Windows.
 
+![MD Reader](docs/screenshot-dark.png)
+
+## Download
+Get the latest version from **[Releases](https://github.com/sliver301/MD-Reader/releases/latest)**. Download the `.zip`, unzip it anywhere, and run **MD Reader.exe**. It asks whether to **Install** (just for you, or for all users) or run **Portable**. Keep the exe next to its `_internal` folder, because it doesn't run on its own.
+
+## Features
+
 - **Home screen** with its own **Home** button at the left of the tab row (`Alt+Home`): open a file, start a new one, continue where you left off, or pick a recent file. Closing the last tab brings you back here.
 - **File menu** (top left): new, open, open recent, save, save as, reload, export, show in folder, close tab, close all tabs.
 - **Tabs**: open as many .md files as you like, one tab each (`Ctrl+T` new, `Ctrl+W` close, `Ctrl+Tab` next, middle-click closes, drag to reorder). Double-clicking more .md files adds tabs to the open window instead of opening new windows.
@@ -12,9 +19,13 @@ A clean, modern Markdown reader and editor for Windows.
 - **Settings** (gear icon): Make default, Install / Uninstall, text size, fonts, page width, table copy buttons, start in edit mode, live preview, sync scrolling, word wrap, what to show when the app opens (home screen or last files), auto-reload.
 - Find (`Ctrl+F`), recent files, drag and drop, export to HTML or PDF, unsaved-changes warning, reload when a file changes on disk.
 
-## Get the app (EXE)
+| Edit with live preview | Home screen |
+|---|---|
+| ![Editing with live preview, light theme](docs/screenshot-edit-light.png) | ![Home screen](docs/screenshot-home.png) |
+
+## Build the EXE yourself
 1. Have Python 3 with PySide6 and PyInstaller installed (or internet once so the script can get them).
-2. Double-click **Build EXE.bat**. It makes `dist\MD Reader\MD Reader.exe` (keep that whole folder together).
+2. Double-click **Build EXE.bat**. It makes `dist\MD Reader\MD Reader.exe` (keep that whole folder together) and a ready-to-share `dist\MD-Reader-v<version>-win64.zip` for Releases.
 3. Run `MD Reader.exe`. It asks **Install** or **Portable**, like HK-Master:
    - **Just for me**: installs to `%LOCALAPPDATA%\Programs\MD Reader`.
    - **All users** (shield icon): installs to `Program Files\MD Reader`; Windows asks for permission.

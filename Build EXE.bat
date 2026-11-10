@@ -23,11 +23,20 @@ if not exist app_icon.ico "%PY%" md_reader.py --make-icon app_icon.ico
   --exclude-module matplotlib --exclude-module pandas --exclude-module scipy --exclude-module yaml ^
   md_reader.py
 echo.
-if exist "dist\MD Reader\MD Reader.exe" (
-    echo Done. Open "dist\MD Reader\MD Reader.exe" and choose Install or Portable.
-    pause
-    exit /b 0
-)
+if not exist "dist\MD Reader\MD Reader.exe" goto :fail
+REM Release zip: the exe only runs next to its _internal folder, so share the whole folder.
+for /f "tokens=3" %%V in ('findstr /b /c:"APP_VERSION =" md_reader.py') do set "VER=%%~V"
+set "ZIP=dist\MD-Reader-v%VER%-win64.zip"
+if exist "dist\MD Reader\settings.json" del "dist\MD Reader\settings.json"
+echo Making the release zip...
+powershell -NoProfile -Command "Compress-Archive -Path 'dist\MD Reader' -DestinationPath '%ZIP%' -Force"
+echo.
+echo Done.
+echo   App:         dist\MD Reader\MD Reader.exe  - open it and choose Install or Portable.
+echo   Release zip: %ZIP%
+echo                Upload this zip to GitHub Releases. The exe alone does not run without its _internal folder.
+pause
+exit /b 0
 
 :fail
 echo.
