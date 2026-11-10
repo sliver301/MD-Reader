@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# MD Reader - Copyright (C) 2026 sliver301. Free software under the GNU GPL v3 or later; see LICENSE.
 """
 MD Reader - a modern Markdown reader / editor for Windows.
 

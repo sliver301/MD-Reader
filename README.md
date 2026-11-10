@@ -48,3 +48,6 @@ Both .bat files work **without internet**. They find Python on their own (py lau
 | `F5` | Reload from disk |
 
 Settings live in `settings.json` next to the app when portable, or in `%APPDATA%\MD Reader` when installed.
+
+## License
+MD Reader is free software, licensed under the [GNU General Public License v3.0 or later](LICENSE). You can use, change and share it; if you share a changed version, it must stay under the GPL with its source available.
