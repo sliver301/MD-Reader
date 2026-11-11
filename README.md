@@ -60,5 +60,9 @@ Both .bat files work **without internet**. They find Python on their own (py lau
 
 Settings live in `settings.json` next to the app when portable, or in `%APPDATA%\MD Reader` when installed.
 
+## 🤖 Made with AI
+
+This app is about 99% vibe-coded: I described what I wanted, tested it on my own PC, and an AI assistant (Claude) wrote the code. It works great for me every day, but it hasn't been through a formal code review. Bug reports and pull requests are very welcome.
+
 ## License
 MD Reader is free software, licensed under the [GNU General Public License v3.0 or later](LICENSE). You can use, change and share it; if you share a changed version, it must stay under the GPL with its source available.
